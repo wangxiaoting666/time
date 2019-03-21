@@ -1,0 +1,362 @@
+
+.content{
+  width:100%;
+  /* padding:40px 0 0 0; */
+
+}
+.swiper{
+  margin-bottom:30px; 
+}
+slide-image image{
+  height:360px;
+}
+
+
+/* 时间进度 */
+.time-loading{
+  width: 100%;
+  height: 120rpx;
+  margin-top: 30rpx;
+  clear: both;
+   /* border: 1px solid red;  */
+}
+.time-loading .time-left{
+  width: 16%;
+  height: 120rpx;
+  float: left;
+  /* background-color: red; */
+}
+.time-loading .time-left text:first-child{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  display: block;
+  font-size: 30rpx;
+}
+.time-loading .time-left text:last-child{
+  width: 100%;
+  height: 40rpx;
+  line-height: 30rpx;
+  text-align: center;
+  display: block;
+  font-size: 30rpx;
+  color: #c3c4a4;
+}
+
+.time-loading .time-center{
+  width: 68%;
+  height: 120rpx;
+  float: left;
+  /* background-color: blue; */
+}
+.center-text{  
+  text-align: center;
+  margin-top: 10px;
+  font-size: 28rpx;
+  color: #c3c4a4;
+  display:none;
+}
+.time-loading .time-right{
+  width: 16%;
+  height: 120rpx;
+  float: left;
+}
+.time-loading .time-right text:first-child{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  display: block;
+  font-size: 30rpx;
+}
+.time-loading .time-right text:last-child{
+  width: 100%;
+  height: 40rpx;
+  line-height: 30rpx;
+  text-align: center;
+  display: block;
+  font-size: 30rpx;
+  color: #c3c4a4;
+}
+.day{
+  color: #f79d47;
+}
+
+.week{
+  color: #779c2a;
+}
+.month{
+  color: #47a2f5;
+}
+.year{
+  color: #f25a8d;
+}
+
+
+
+/* 时间计时器 */
+.countDownTimeView{
+  width:650rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  clear: both;
+  /* border: 1px solid red;   */
+}
+.countDownTimeView view{
+    /* width:20%; */
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    float: left;
+    border-radius: 10rpx;
+}
+.countDownTimeView view:nth-child(1){
+    width:34%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #FAF4D0;
+    margin-right: 2%;
+    
+}.countDownTimeView view:nth-child(2){
+    width:20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #FAF4D0;
+    margin-right: 2%;
+}.countDownTimeView view:nth-child(3){
+    width:20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #FAF4D0;
+    margin-right: 2%;
+}.countDownTimeView view:nth-child(4){
+    width:20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #FAF4D0;
+}
+.starTime{
+  width:650rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 auto;
+  /* border: 1px solid red;   */
+}
+
+
+
+
+
+
+
+
+
+.progress-bar.active{
+  animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+@-webkit-keyframes animate-positive{
+  0% { width: 0; }
+}
+@keyframes animate-positive{
+  0% { width: 0; }
+}
+@-webkit-keyframes progress-bar-stripes {
+from {
+background-position:40px 0
+}
+to {
+background-position:0 0
+}
+}
+@keyframes progress-bar-stripes {
+from {
+background-position:40px 0
+}
+to {
+background-position:0 0
+}
+}
+.progress {
+  height: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease
+}
+.progress-striped .progress-bar, .progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px
+}
+.progress.active .progress-bar, .progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite
+}
+.progress-bar-success {
+  background-color: #46a1f0;
+}
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
+}
+.progress-bar-info {
+  background-color: #70a634
+}
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
+}
+
+.progress-bar-day {
+  background-color: #fa9d3e
+}
+.progress-striped .progress-bar-day {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
+}
+
+.progress-bar-warning {
+  background-color: #f85691
+}
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
+}
+.progress-bar-danger {
+  background-color: #d9534f
+}
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
+}
+
+
+
+
+.progress{
+  height: 8px;
+  background: #f7f7f7;
+  padding: 2px;
+  overflow: visible;
+  border-radius: 10px;
+  /* border-top: 1px solid #000;
+  border-bottom: 1px solid #7992a8; */
+  margin-top: 10px;
+}
+.progress .progress-bar{
+  border-radius: 20px;
+  position: relative;
+  animation: animate-positive 2s;
+}
+.progress .progress-value{
+  display: block;
+  padding: 3px 7px;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 4px;
+  background: #191919;
+  border: 1px solid #000;
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  opacity: 0.2;
+}
+.progress .progress-value:after{
+  content: "";
+  border-top: 10px solid #191919;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -6px;
+  left: 26%;
+}
+.progress-bar.active{
+  animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+@-webkit-keyframes animate-positive{
+  0% { width: 0; }
+}
+@keyframes animate-positive{
+  0% { width: 0; }
+}
+
+
+
+
+
+
+.v-body{
+    display: flex;
+    position: relative;  
+    height: 150px;  
+   
+    margin-top: 50px;
+  
+}
+
+.myCanvas{
+  background-color: transparent;
+  width: 90px;
+  height:400px;
+}
+
+.v-canvas{
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    width: 90px;
+    background-color: transparent;
+}
+
+.v-img{
+  position: fixed;
+  right: 45px;
+  bottom: 30px;
+}
+
+.bt-img{
+  width: 40px;
+  height: 40px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition:ease all;
+  -moz-transition:ease all;
+  transition:ease all;
+  -webkit-transition-duration:700ms;
+  -moz-transition-duration:700ms;
+  transition-duration:700ms;  
+}

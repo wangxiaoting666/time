@@ -1,0 +1,90 @@
+
+<view class="content">
+  <!--轮播图--> 
+   <swiper class="swiper" style="height: {{imageHeight/3}}px; width:100%" indicator-dots="{{indicatorDots}}" current="{{current}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >  
+    <block wx:for="{{imgUrls}}" wx:key="">  
+      <swiper-item>  
+        <image class="slide-image" src="{{item.image}}" model="aspectFit" style="width: {{imageWidth}}px;" bindload="imageLoad" />  
+      </swiper-item>  
+    </block>  
+  </swiper>   
+ 
+  <!-- 时间进度条 -->
+  <view class="time-loading"  bindtap='clickView'>
+    <view class="time-left">    
+      <text class="day">今日</text>
+      <text>{{h}}点</text>
+    </view>
+    <view class="time-center">
+      <view class="center-text">当前<text class="day">{{h}}点</text>,今日还剩<text class="day">{{last_h}}</text>时</view>
+      <view class="progress">
+        <view class="progress-bar progress-bar-day progress-bar-striped active" style="width: {{h_spend}}%;">
+          <view class="progress-value">{{h_spend}}%</view>
+        </view>
+      </view>
+    </view>
+    <view class="time-right">
+      <text class="day">{{h_spend}}%</text>
+      <text>24点</text>
+    </view>
+  </view>
+  <view class="time-loading">
+    <view class="time-left">    
+      <text class="week">本周</text>
+      <text>周{{week_day}}</text>
+    </view>
+    <view class="time-center">
+      <view class="center-text">今天是<text class="week">周{{week_day}}</text>,本周还剩<text class="week">{{last_week}}</text>天</view>
+      <view class="progress">
+        <view class="progress-bar progress-bar-info progress-bar-striped active" style="width: {{week_speed}}%;">
+          <view class="progress-value">{{week_speed}}%</view>
+        </view>
+      </view>
+    </view>
+    <view class="time-right">
+      <text class="week">{{week_speed}}%</text>
+      <text>周日</text>
+    </view>
+  </view>
+  <view class="time-loading">
+    <view class="time-left">    
+      <text class="month">本月</text>
+      <text>{{months}}/{{day}}</text>
+    </view>
+    <view class="time-center">
+      <view class="center-text"  >今天是<text class="month">{{months}}月{{day}}日</text>,本月还剩<text class="month">{{last_month}}</text>天</view>
+      <view class="progress">
+        <view class="progress-bar progress-bar-success progress-bar-striped active" style="width: {{month_spend}}%;">
+          <view class="progress-value">{{month_spend}}%</view>
+        </view>
+      </view>
+    </view>
+    <view class="time-right">
+      <text class="month">{{month_spend}}%</text>
+      <text>{{nonth_total}}</text>
+    </view>
+  </view>
+  <view class="time-loading">
+    <view class="time-left">    
+      <text class="year">今年</text>
+      <text>{{newDay}}</text>
+    </view>
+    <view class="time-center">
+      <view class="center-text"  >今年已过去<text class="year">{{newDay}}</text>天,还剩<text class="year">{{last_Year}}</text>天</view>
+      <view class="progress">
+        <view class="progress-bar progress-bar-warning progress-bar-striped active" style="width: {{Year_spend}}%;">
+          <view class="progress-value">{{Year_spend}}%</view>
+        </view>
+      </view>
+    </view>
+    <view class="time-right">
+      <text class="year">{{Year_spend}}%</text>
+      <text>{{totalYear}}</text>
+    </view>
+  </view>
+  
+</view> 
+<!--广告 --> 
+<view class="v-body">
+ 
+  </view>
